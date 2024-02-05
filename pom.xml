@@ -9,6 +9,7 @@
     <name>gulimall</name>
     <description>gulimall</description>
     <packaging>pom</packaging>
+<!--    集合所有模块-->
     <modules>
         <module>gulicoupon</module>
         <module>gulimember</module>
