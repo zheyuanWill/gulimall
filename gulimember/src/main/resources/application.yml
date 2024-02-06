@@ -9,6 +9,9 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+      config:
+        import-check:
+          enabled: false
   application:
     name: gulimember
 mybatis-plus:
