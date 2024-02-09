@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="guligateway" />
+        <module name="gulicoupon" />
+        <module name="guliorder" />
+        <module name="guliware" />
+        <module name="gulimember" />
+        <module name="guliproduct" />
+        <module name="gulicommon" />
+        <module name="renren-fast" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gulicoupon" options="-parameters" />
+      <module name="guligateway" options="-parameters" />
+      <module name="gulimember" options="-parameters" />
+      <module name="guliorder" options="-parameters" />
+      <module name="guliproduct" options="-parameters" />
+      <module name="guliware" options="-parameters" />
+      <module name="renren-fast" options="-parameters" />
+    </option>
+  </component>
+</project>

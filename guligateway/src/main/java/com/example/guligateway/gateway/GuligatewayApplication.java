@@ -1,4 +1,4 @@
-package com.example.guligateway;
+package com.example.guligateway.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
