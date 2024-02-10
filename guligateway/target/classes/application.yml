@@ -15,6 +15,13 @@ spring:
           uri: https://www.qq.com
           predicates:
             - Query=url,qq
+        - id: product_route
+          #放在admin-route之前不然会被覆盖
+          uri: lb://guliproduct
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
         - id: admin_route
           uri: lb://renren-fast
 #         lb:loadbalanace
@@ -23,6 +30,7 @@ spring:
           filters:
             - RewritePath=/api/(?<segment>/?.*), /renren-fast/$\{segment}
           # 把api转成renren-fast
+
 
 server:
   port: 88
