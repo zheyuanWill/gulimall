@@ -15,6 +15,8 @@
         <module name="guliproduct" />
         <module name="gulicommon" />
         <module name="renren-fast" />
+        <module name="thirdparty" />
+        <module name="renren-generator" />
       </profile>
     </annotationProcessing>
   </component>
@@ -27,6 +29,8 @@
       <module name="guliproduct" options="-parameters" />
       <module name="guliware" options="-parameters" />
       <module name="renren-fast" options="-parameters" />
+      <module name="renren-generator" options="-parameters" />
+      <module name="thirdparty" options="-parameters" />
     </option>
   </component>
 </project>
