@@ -19,6 +19,7 @@ import com.example.common.utils.Query;
 import com.example.guliproduct.product.dao.CategoryDao;
 import com.example.guliproduct.product.entity.CategoryEntity;
 import com.example.guliproduct.product.service.CategoryService;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Service("categoryService")
@@ -114,7 +115,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
 
         return paths;
     }
-
+    @Transactional
     @Override
     public void updateCascade(CategoryEntity category) {
         categoryBrandRelationServiceImpl.updateCategory(category.getCatId(), category.getName());
