@@ -1,6 +1,8 @@
 package com.example.guliproduct.product.service.impl;
 
+import com.example.guliproduct.product.service.CategoryBrandRelationService;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -17,6 +19,8 @@ import com.example.guliproduct.product.service.BrandService;
 @Service("brandService")
 public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> implements BrandService {
 
+    @Autowired
+    private CategoryBrandRelationService categoryBrandRelationService;
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
 
@@ -34,6 +38,19 @@ public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> impleme
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public void updateDetail(BrandEntity brand) {
+        //保证冗余字段的数据一致
+        baseMapper.updateById(brand);
+
+        if (!StringUtils.isEmpty(brand.getName())) {
+            //同步更新其他关联表中的数据
+            categoryBrandRelationService.updateBrand(brand.getBrandId(),brand.getName());
+
+            //TODO 更新其他关联
+        }
     }
 
 }

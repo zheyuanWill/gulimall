@@ -1,6 +1,7 @@
 package com.example.guliproduct.product.service.impl;
 
 import jakarta.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -22,6 +23,8 @@ import com.example.guliproduct.product.service.CategoryService;
 
 @Service("categoryService")
 public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity> implements CategoryService {
+    @Autowired
+    CategoryBrandRelationServiceImpl categoryBrandRelationServiceImpl;
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
         IPage<CategoryEntity> page = this.page(
@@ -112,4 +115,8 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         return paths;
     }
 
+    @Override
+    public void updateCascade(CategoryEntity category) {
+        categoryBrandRelationServiceImpl.updateCategory(category.getCatId(), category.getName());
+    }
 }
