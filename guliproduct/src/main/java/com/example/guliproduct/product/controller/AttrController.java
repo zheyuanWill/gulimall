@@ -3,13 +3,10 @@ package com.example.guliproduct.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.example.guliproduct.product.vo.AttrRespVo;
 import com.example.guliproduct.product.vo.AttrVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.guliproduct.product.entity.AttrEntity;
 import com.example.guliproduct.product.service.AttrService;
@@ -41,6 +38,14 @@ public class AttrController {
 
         return R.ok().put("page", page);
     }
+    @GetMapping("/{attrType}/list/{catelogId}")
+    public R baseAttrList(@RequestParam Map<String, Object> params,
+                          @PathVariable("catelogId") Long catelogId,
+                          @PathVariable("attrType")String type){
+
+        PageUtils page = attrService.queryBaseAttrPage(params,catelogId,type);
+        return R.ok().put("page", page);
+    }
 
 
     /**
@@ -49,9 +54,11 @@ public class AttrController {
     @RequestMapping("/info/{attrId}")
     //@RequiresPermissions("product:attr:info")
     public R info(@PathVariable("attrId") Long attrId){
-		AttrEntity attr = attrService.getById(attrId);
+        // AttrEntity attr = attrService.getById(attrId);
 
-        return R.ok().put("attr", attr);
+        AttrRespVo respVo = attrService.getAttrInfo(attrId);
+
+        return R.ok().put("attr", respVo);
     }
 
     /**
@@ -70,11 +77,13 @@ public class AttrController {
      */
     @RequestMapping("/update")
     //@RequiresPermissions("product:attr:update")
-    public R update(@RequestBody AttrEntity attr){
-		attrService.updateById(attr);
+    public R update(@RequestBody AttrVo attr){
+
+        attrService.updateAttrById(attr);
 
         return R.ok();
     }
+
 
     /**
      * 删除

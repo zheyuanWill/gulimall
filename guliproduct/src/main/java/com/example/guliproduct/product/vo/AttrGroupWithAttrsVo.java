@@ -1,6 +1,6 @@
 package com.example.guliproduct.product.vo;
 
-import com.xunqi.gulimall.product.entity.AttrEntity;
+import com.example.guliproduct.product.entity.AttrEntity;
 import lombok.Data;
 
 import java.util.List;
@@ -42,4 +42,5 @@ public class AttrGroupWithAttrsVo {
     private Long catelogId;
 
     private List<AttrEntity> attrs;
+
 }
