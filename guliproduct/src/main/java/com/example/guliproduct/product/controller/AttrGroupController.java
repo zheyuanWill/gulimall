@@ -5,16 +5,14 @@ import java.util.List;
 import java.util.Map;
 
 import com.example.guliproduct.product.entity.AttrEntity;
-import com.example.guliproduct.product.service.AttrAttrgroupRelationService;
-import com.example.guliproduct.product.service.AttrService;
-import com.example.guliproduct.product.service.CategoryService;
+import com.example.guliproduct.product.entity.ProductAttrValueEntity;
+import com.example.guliproduct.product.service.*;
 import com.example.guliproduct.product.vo.AttrGroupRelationVo;
 import com.example.guliproduct.product.vo.AttrGroupWithAttrsVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.guliproduct.product.entity.AttrGroupEntity;
-import com.example.guliproduct.product.service.AttrGroupService;
 import com.example.common.utils.PageUtils;
 import com.example.common.utils.R;
 
@@ -37,7 +35,8 @@ public class AttrGroupController {
 
     @Autowired
     private AttrService attrService;
-
+    @Autowired
+    private ProductAttrValueService productAttrValueService;
     @Autowired
     private AttrAttrgroupRelationService attrAttrgroupRelationService;
     /**
@@ -52,8 +51,28 @@ public class AttrGroupController {
 
         return R.ok().put("page", page);
     }
+///product/attr/base/listforspu/{spuId}
 
+    /**
+     *  获取spu规格
+     */
+    @GetMapping("/base/listforspu/{spuId}")
+    public R baseAttrlistforspu(@PathVariable("spuId") Long spuId){
 
+        List<ProductAttrValueEntity> entities = productAttrValueService.baseAttrListforspu(spuId);
+
+        return R.ok().put("data",entities);
+    }
+    ///product/attr/update/{spuId}
+    @PostMapping("/update/{spuId}")
+    //@RequiresPermissions("product:attr:update")
+    public R updateSpuAttr(@PathVariable("spuId") Long spuId,
+                           @RequestBody List<ProductAttrValueEntity> entities){
+
+        productAttrValueService.updateSpuAttr(spuId,entities);
+
+        return R.ok();
+    }
     /**
      * 信息
      */

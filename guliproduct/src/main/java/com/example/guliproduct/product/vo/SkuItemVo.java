@@ -1,8 +1,8 @@
 package com.example.guliproduct.product.vo;
 
-import com.xunqi.gulimall.product.entity.SkuImagesEntity;
-import com.xunqi.gulimall.product.entity.SkuInfoEntity;
-import com.xunqi.gulimall.product.entity.SpuInfoDescEntity;
+import com.example.guliproduct.product.entity.SkuImagesEntity;
+import com.example.guliproduct.product.entity.SkuInfoEntity;
+import com.example.guliproduct.product.entity.SpuInfoDescEntity;
 import lombok.Data;
 import lombok.ToString;
 
