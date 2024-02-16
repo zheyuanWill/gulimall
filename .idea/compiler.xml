@@ -14,6 +14,7 @@
         <module name="gulimember" />
         <module name="guliproduct" />
         <module name="gulicommon" />
+        <module name="gulisearch" />
         <module name="renren-fast" />
         <module name="thirdparty" />
         <module name="renren-generator" />
@@ -27,6 +28,7 @@
       <module name="gulimember" options="-parameters" />
       <module name="guliorder" options="-parameters" />
       <module name="guliproduct" options="-parameters" />
+      <module name="gulisearch" options="-parameters" />
       <module name="guliware" options="-parameters" />
       <module name="renren-fast" options="-parameters" />
       <module name="renren-generator" options="-parameters" />

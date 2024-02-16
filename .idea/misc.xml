@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/gulicommon/pom.xml" />
         <option value="$PROJECT_DIR$/guligateway/pom.xml" />
         <option value="$PROJECT_DIR$/thirdparty/pom.xml" />
+        <option value="$PROJECT_DIR$/gulisearch/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
