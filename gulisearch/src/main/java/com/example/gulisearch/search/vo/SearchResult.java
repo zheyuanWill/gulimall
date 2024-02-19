@@ -67,7 +67,7 @@ public class SearchResult {
         private String link;
     }
 
-
+    //搜索时的品牌会有图片文字，id是一个结合体
     @Data
     public static class BrandVo {
 
