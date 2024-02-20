@@ -10,6 +10,7 @@ import java.util.concurrent.*;
  **/
 public class ThreadTest {
 
+    //线程池控制资源
     public static ExecutorService executor = Executors.newFixedThreadPool(10);
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -77,7 +78,8 @@ public class ThreadTest {
          * 1、thenRunL：不能获取上一步的执行结果
          * 2、thenAcceptAsync：能接受上一步结果，但是无返回值
          * 3、thenApplyAsync：能接受上一步结果，有返回值
-         *
+         *相当于vue的promise
+         * thencombineasync之类的文档上都有
          */
         CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
             System.out.println("当前线程：" + Thread.currentThread().getId());
@@ -93,7 +95,7 @@ public class ThreadTest {
     }
 
     private static void threadPool() {
-
+        //原生线程池创建
         ExecutorService threadPool = new ThreadPoolExecutor(
                 200,
                 10,
