@@ -1,20 +1,19 @@
-package com.example.gulisearch.search;
+package com.example.guliauthserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
+@SpringBootApplication
 @EnableDiscoveryClient
-@EnableRedisHttpSession
 @EnableFeignClients
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-public class GulisearchApplication {
+@EnableRedisHttpSession
+public class GuliauthserverApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GulisearchApplication.class, args);
+        SpringApplication.run(GuliauthserverApplication.class, args);
     }
 
 }
