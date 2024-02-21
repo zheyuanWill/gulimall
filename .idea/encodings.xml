@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/guliauthserver/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulicoupon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulicoupon/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/guligateway/src/main/java" charset="UTF-8" />
@@ -12,6 +13,8 @@
     <file url="file://$PROJECT_DIR$/guliproduct/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/guliproduct/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gulisearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gulissoserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gulissotclient/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/guliware/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/guliware/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/renren-fast/src/main/java" charset="UTF-8" />
