@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gulissoclient" />
         <module name="gulimember" />
         <module name="gulicommon" />
         <module name="gulisearch" />
@@ -17,6 +18,7 @@
         <module name="guliorder" />
         <module name="guliware" />
         <module name="guliproduct" />
+        <module name="gulicart" />
         <module name="renren-fast" />
         <module name="gulissoserver" />
         <module name="guliauthserver" />
@@ -29,12 +31,14 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="guliauthserver" options="-parameters" />
+      <module name="gulicart" options="-parameters" />
       <module name="gulicoupon" options="-parameters" />
       <module name="guligateway" options="-parameters" />
       <module name="gulimember" options="-parameters" />
       <module name="guliorder" options="-parameters" />
       <module name="guliproduct" options="-parameters" />
       <module name="gulisearch" options="-parameters" />
+      <module name="gulissoclient" options="-parameters" />
       <module name="gulissoserver" options="-parameters" />
       <module name="gulissotclient" options="-parameters" />
       <module name="guliware" options="-parameters" />
