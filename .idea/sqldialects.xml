@@ -2,6 +2,8 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://E:/BaiduNetdiskDownload/谷粒商城/Guli Mall/分布式基础/db/gulimall_pms.sql" dialect="MySQL" />
+    <file url="file://E:/BaiduNetdiskDownload/谷粒商城/Guli Mall/分布式基础/db/gulimall_undo.sql" dialect="MySQL" />
+    <file url="file://E:/BaiduNetdiskDownload/谷粒商城/Guli Mall/分布式基础/db/gulimall_wms.sql" dialect="MySQL" />
     <file url="file://E:/BaiduNetdiskDownload/谷粒商城/Guli Mall/分布式基础/db/pms_catelog.sql" dialect="MySQL" />
   </component>
 </project>

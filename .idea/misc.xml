@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/gulissoserver/pom.xml" />
         <option value="$PROJECT_DIR$/gulissoclient/pom.xml" />
         <option value="$PROJECT_DIR$/gulicart/pom.xml" />
+        <option value="$PROJECT_DIR$/guliseckill/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

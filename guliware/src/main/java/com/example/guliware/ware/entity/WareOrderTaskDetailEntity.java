@@ -1,11 +1,16 @@
 package com.example.guliware.ware.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 库存工作单
@@ -14,6 +19,9 @@ import lombok.Data;
  * @email zheyuanwu243@gmail.com
  * @date 2024-02-05 15:55:18
  */
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Data
 @TableName("wms_ware_order_task_detail")
 public class WareOrderTaskDetailEntity implements Serializable {
@@ -37,8 +45,16 @@ public class WareOrderTaskDetailEntity implements Serializable {
 	 */
 	private Integer skuNum;
 	/**
+	 * 仓库id
+	 */
+	private Long wareId;
+	/**
 	 * 工作单id
 	 */
 	private Long taskId;
+	/**
+	 * 锁定状态
+	 */
+	private Integer lockStatus;
 
 }

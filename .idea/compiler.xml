@@ -22,6 +22,7 @@
         <module name="renren-fast" />
         <module name="gulissoserver" />
         <module name="guliauthserver" />
+        <module name="guliseckill" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -38,6 +39,7 @@
       <module name="guliorder" options="-parameters" />
       <module name="guliproduct" options="-parameters" />
       <module name="gulisearch" options="-parameters" />
+      <module name="guliseckill" options="-parameters" />
       <module name="gulissoclient" options="-parameters" />
       <module name="gulissoserver" options="-parameters" />
       <module name="gulissotclient" options="-parameters" />

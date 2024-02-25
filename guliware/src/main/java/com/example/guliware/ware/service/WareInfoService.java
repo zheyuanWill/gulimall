@@ -3,7 +3,7 @@ package com.example.guliware.ware.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.common.utils.PageUtils;
 import com.example.guliware.ware.entity.WareInfoEntity;
-
+import com.example.guliware.ware.vo.FareVo;
 import java.util.Map;
 
 /**
@@ -16,5 +16,7 @@ import java.util.Map;
 public interface WareInfoService extends IService<WareInfoEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    FareVo getFare(Long addrId);
 }
 
